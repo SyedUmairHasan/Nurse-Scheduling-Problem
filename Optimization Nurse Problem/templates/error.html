@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block nav %}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+{% endblock %}
+{% block error %}
+<section>
+    <div class="row">
+        <div class="col-md-12" style="margin-top:5em">
+          <div class="text-center">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    404 Not Found</h2>
+                <div class="error-details">
+                    Sorry, Images not generated for this section!
+                </div>
+                <div class="error-actions">
+                    <a href="{{url_for('main')}}" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        Home </a><a href="{{url_for('generate')}}" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Back </a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

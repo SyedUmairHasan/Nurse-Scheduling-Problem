@@ -1,0 +1,51 @@
+
+{% extends "baseNurse.html" %}
+{% block content %}
+ 
+
+  
+
+  <main id="main">
+
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Next Week Schedule</p>
+        </div>
+
+        <div class="row">
+		{% for sc in sch %}	
+          <div class="col-sm d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-week"></i></div>
+			  <div class="icon"><i class="fab fa-dribbble"></i></div>
+              <h4 class="title"><a href="">{{days[loop.index]}}</a></h4>
+			  <ul class="list-group">
+			{% for s in sc %}
+			{% with my_variable="my value" %}
+			{% if s[2]==0 %}
+			{% set my_variable = "list-group-item list-group-item-warning" %}
+			{% else %}
+			{% set my_variable = "list-group-item list-group-item-success" %}
+			{% endif %}
+				<li class="{{my_variable}}" >{{ s[0]|string + ' works shift ' + s[1]|string }}</li>
+			{% endwith %}
+			{% endfor %}
+				</ul>
+            </div>
+          </div>
+		 {% endfor %} 
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+{% endblock %}
+ 

@@ -1,0 +1,49 @@
+{% extends "baseNurse.html" %}
+{% block content %}
+<section class="page-section">
+<div class="container">
+<div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+  <div class="row">
+  
+    <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background:url(https://blog.capterra.com/wp-content/uploads/2020/11/word-image-1.png);background-position:center;background-size:cover"></div>
+<div class="col-lg-7">
+  <div class="p-5">
+    <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-4">Add Constraints</h1>
+      </div>
+<form action="/submit2" method="post" enctype="multipart/form-data">
+  <div class="form-row">
+  <div class="form-group">
+    <label>Each shift is assigned to at most how many nurse?</label>
+    <input type="number" name="c1" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Each nurse works at most how many shifts per day?</label>
+    <input type="number" name="c2" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label>Each nurse works at most how many shifts per week?</label>
+    <input type="number" name="c3" class="form-control" required>
+  </div>
+  <br>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="gridCheck" name="check"></input>
+    <label class="form-check-label" for="gridCheck">
+      If a nurse work on night shift the next day she cannot work in morning    </label>
+  </div>
+
+  </div>
+
+  <hr>
+  <button type="submit" class="btn btn-primary" onclick="loading();">Generate Schedule</button>
+</form>
+   </div>
+  </div>
+  </div>
+ </div>
+</div>
+</div>
+</section>
+
+{% endblock %}

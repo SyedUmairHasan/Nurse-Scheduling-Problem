@@ -1,0 +1,94 @@
+{% extends "baseNurse.html" %}
+{% block content %}
+<section class="page-section">
+<div class="container">
+<div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+  <div class="row">
+  
+    <div class="col-lg-5 d-none d-lg-block bg-register-image" style="background:url(https://www.scnsoft.com/blog-pictures/healthcare/nursing-apps-01.png);background-position:center;background-size:cover; background-repeat:no-repeat;"></div>
+<div class="col-lg-7">
+  <div class="p-5">
+    <div class="text-center">
+        <h1 class="h4 text-gray-900 mb-4">Add Nurses</h1>
+      </div>
+<form action="/submit" method="post" enctype="multipart/form-data">
+  <div class="form-row">
+      <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="nursename" class="form-control" required>
+  </div>
+
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputState">Shift Preference Monday</label>
+      <select id="inputState" class="form-control" name="day1">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Tuesday</label>
+      <select id="inputState" class="form-control" name="day2">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Wednesday</label>
+      <select id="inputState" class="form-control" name="day3">
+        <option selected>No Preference</option>
+        <option>Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Thursday</label>
+      <select id="inputState" class="form-control" name="day4">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Friday</label>
+      <select id="inputState" class="form-control" name="day5">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Saturday</label>
+      <select id="inputState" class="form-control" name="day6">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+      <br>
+      <label for="inputState">Shift Preference Sunday</label>
+      <select id="inputState" class="form-control" name="day7">
+        <option selected>No Preference</option>
+        <option >Morning</option>
+        <option>Evening</option>
+        <option>Night</option>
+      </select>
+    </div>
+  </div>
+  <hr>
+  <button type="submit" class="btn btn-primary" onclick="loading();">Add Nurse</button>
+</form>
+   </div>
+  </div>
+  </div>
+ </div>
+</div>
+</div>
+</section>
+
+{% endblock %}
